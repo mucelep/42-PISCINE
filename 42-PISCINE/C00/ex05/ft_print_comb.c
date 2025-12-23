@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Artan sıraya göre listelenen üç farklı basamağın tüm farklı kombinasyonlarını, artan
+düzende ekrana yazdıran bir fonksiyon yazınız. - evet, sayıların tekrar etmesi isteğe
+bağlıdır.
+• İstenilen çıktı aşağıdaki gibidir :
+012, 013, 014, 015, 016, 017, 018, 019, 023, ..., 789$>
+• 987 yok çünkü 789 hali hazırda bulunmakta.
+• 999 yok çünkü 9 rakamı birden fazla kere bulunmakta.*/
+
 #include <unistd.h>
 
 void	ft_print_comb(void)
@@ -42,4 +50,5 @@ void	ft_print_comb(void)
 
 /*int main (){
 	ft_print_comb();
+	return 0;
 }*/

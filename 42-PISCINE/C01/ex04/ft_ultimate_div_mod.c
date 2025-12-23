@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 06:25:40 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 06:25:40 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/23 22:29:23 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/23 22:29:23 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bütün rakamları tek bir satırda, küçükten büyüğe, artan düzende, ekrana yazdıran bir fonksiyon yazınız. 
+//Bu fonksiyon a parametresini b parametresine böler. Bölme işleminin sonucu a ile
+//belirtilen tam sayıda saklanır. Bölümün kalanı b ile belirtilen tam sayıda saklanır
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	char	x;
+	int	swp;
 
-	x = '0';
-	while (x <= '9')
-	{
-		write(1, &x, 1);
-		x++;
-	}
+	swp = *a / *b;
+	*b = *a % *b;
+	*a = swp;
 }

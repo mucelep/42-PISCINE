@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 06:25:40 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 06:25:40 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/23 21:38:26 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/23 21:38:26 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bütün rakamları tek bir satırda, küçükten büyüğe, artan düzende, ekrana yazdıran bir fonksiyon yazınız. 
+//Bir işaretleyiciyi başka bir işaretliyiciden başka işaretleyiciye ve başka işaretleyiciye ve
+//tam sayıya atayan bir fonksiyon oluşturunuz. Bu fonksiyonun parametresi olsun ve fonksiyon o tam sayıya "42" değerini atasın.
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void	ft_ultimate_ft(int *********nbr)
 {
-	char	x;
-
-	x = '0';
-	while (x <= '9')
-	{
-		write(1, &x, 1);
-		x++;
-	}
+	*********nbr = 42;
 }

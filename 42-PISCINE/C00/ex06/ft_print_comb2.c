@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Artan düzende listelenen 00 ile 99 arasındaki iki basamağın, tüm farklı kombinasyonlarını ekrana yazdıran bir fonksiyon yazınız.
+• İstenilen çıktı aşağıdaki gibidir :
+00 01, 00 02, 00 03, 00 04, 00 05, ..., 00 99, 01 02, ..., 97 99, 98 99$>*/
+
 #include <unistd.h>
 
 void	ft_putchar(char c)

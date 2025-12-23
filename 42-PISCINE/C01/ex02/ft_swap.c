@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 06:25:40 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 06:25:40 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/23 22:06:56 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/23 22:06:56 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bütün rakamları tek bir satırda, küçükten büyüğe, artan düzende, ekrana yazdıran bir fonksiyon yazınız. 
+//Adresleri parametre olarak girilmiş iki tam sayının değerini değiştiren bir fonsksiyon oluşturunuz.
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void	ft_swap(int *a, int *b)
 {
-	char	x;
+	int	swp;
 
-	x = '0';
-	while (x <= '9')
-	{
-		write(1, &x, 1);
-		x++;
-	}
+	swp = *a;
+	*a = *b;
+	*b = swp;
 }
+
+/*#include <stdio.h>
+
+int main()
+{
+	int a,b;
+	a = 1;
+	b = 2;
+	ft_swap(a,b);
+	printf("a = %d \n b = %d",a,b);
+	return 0;
+}*/

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// 'z' harfinden başlayarak, azalan şekilde (z'den a'ya doğru), tek satırda, hepsi küçük
+// harf olacak şekilde alfabeyi ekrana yazdıran bir fonksiyon yazınız.
+
 #include <unistd.h>
 
 void	ft_print_reverse_alphabet(void)

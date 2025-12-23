@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// Paramtre olarak verilen karakteri, ekrana yazdıran bir fonksiyon yazınız.
+
 #include <unistd.h>
 
 void	ft_putchar(char c)

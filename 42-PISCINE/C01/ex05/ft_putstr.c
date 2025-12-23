@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 06:25:40 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 06:25:40 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/23 22:36:47 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/23 22:36:47 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bütün rakamları tek bir satırda, küçükten büyüğe, artan düzende, ekrana yazdıran bir fonksiyon yazınız. 
+//Standart çıktıya karakter dizisi yazan bir fonksiyon oluşturunuz.
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_putstr(char *str)
 {
-	char	x;
+	int	i;
 
-	x = '0';
-	while (x <= '9')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		write(1, &x, 1);
-		x++;
+		write(1, &str[i], 1);
+		i++;
 	}
 }

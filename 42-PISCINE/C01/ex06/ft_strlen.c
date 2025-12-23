@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 06:25:40 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 06:25:40 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/23 22:41:02 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/23 22:41:02 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bütün rakamları tek bir satırda, küçükten büyüğe, artan düzende, ekrana yazdıran bir fonksiyon yazınız. 
+// Bir karakter dizisindeki elemanları sayan ve bu sayıyı döndüren bir fonksiyon oluşturunuz.
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+int	ftstrlen(char *str)
 {
-	char	x;
+	int	i;
 
-	x = '0';
-	while (x <= '9')
+	i = 0;
+	while (str[i])
 	{
-		write(1, &x, 1);
-		x++;
+		i++;
 	}
+	return (i);
 }

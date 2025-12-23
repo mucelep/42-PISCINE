@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 06:25:40 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 06:25:40 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/23 21:31:24 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/23 21:31:24 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bütün rakamları tek bir satırda, küçükten büyüğe, artan düzende, ekrana yazdıran bir fonksiyon yazınız. 
+//Parametre olarak bir tam sayı işaretçisi alan ve "42" değerini bu tam sayıya atayan
+//bir fonksiyon oluşturunuz.
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void	ft_ft(int *nbr)
 {
-	char	x;
-
-	x = '0';
-	while (x <= '9')
-	{
-		write(1, &x, 1);
-		x++;
-	}
+	*nbr = 42;
 }

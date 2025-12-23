@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Parametre olarak girilen sayıyı ekrana yazıdıran bir fonksiyon yazınız. Yazdığnız
+//fonksiyon int tipindeki tüm sayı değerlerini yazdırabilmelidir.
+
 #include <unistd.h>
 
 void	ft_putnbr(int nb)

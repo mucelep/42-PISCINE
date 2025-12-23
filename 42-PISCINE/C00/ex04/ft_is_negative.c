@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// Parametre olarak verilen tam sayının işaretine bağlı olarak 'N' yada 'P' yazdıran bir fonksiyon yazınız.
+// Eger sayı negatif ise 'N' pozitif veya sıfır ise 'P' göstermeli.
+
 #include <unistd.h>
 
 void	ft_is_negative(int n)
@@ -23,4 +26,5 @@ void	ft_is_negative(int n)
 /*int main()
 {
 	ft_is_negative(5);
+	return 0;
 }*/
