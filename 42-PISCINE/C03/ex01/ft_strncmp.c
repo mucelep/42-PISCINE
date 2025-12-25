@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 22:41:02 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 22:41:02 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/25 01:53:07 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/25 01:53:07 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bir karakter dizisindeki elemanları sayan ve bu sayıyı döndüren bir fonksiyon oluşturunuz.
+//strncmp fonksiyonun davranışını yeniden üret (man strcmp).
 
-int	ft_strlen(char *str)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (str[i])
+	while ((s1[i] || s2[i]) && i < n)
 	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (i);
+	return (0);
+}
+
+#include <stdio.h>
+
+int main ()
+{
+	int	x;
+	char s1[] = "aaa";
+	char s2[] = "aaab";
+	x = ft_strncmp(s1,s2,3);
+	printf("%d",x);
 }

@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 22:41:02 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 22:41:02 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/25 02:23:53 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/25 02:23:53 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bir karakter dizisindeki elemanları sayan ve bu sayıyı döndüren bir fonksiyon oluşturunuz.
+//strcat fonksiyonun davranışını yeniden üret (man strcat)
 
-int	ft_strlen(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (str[i])
-	{
+	j = 0;
+	while (dest[i])
 		i++;
+	while (src[j])
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	return (i);
+	dest[i] = '\0';
+	return (dest);
+}
+
+#include <stdio.h>
+
+int main ()
+{
+	char dst[20] = "merhaba";
+	char src[] = " dunya";
+	printf("%s",ft_strcat(dst,src));
+
 }

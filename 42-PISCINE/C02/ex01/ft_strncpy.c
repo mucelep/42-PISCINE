@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 22:41:02 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 22:41:02 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/24 04:33:47 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/24 04:33:47 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bir karakter dizisindeki elemanları sayan ve bu sayıyı döndüren bir fonksiyon oluşturunuz.
+//strncpy fonksiyonun davranışını yeniden üret (man strncpy).
 
-int	ft_strlen(char *str)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int i;
 
 	i = 0;
-	while (str[i])
+	while (src[i] != '\0' && i < n)
 	{
+		dest[i] = src[i];
 		i++;
 	}
-	return (i);
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

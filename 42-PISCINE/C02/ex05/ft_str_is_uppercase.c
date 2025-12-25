@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 22:41:02 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 22:41:02 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/24 21:19:45 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/24 21:19:45 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bir karakter dizisindeki elemanları sayan ve bu sayıyı döndüren bir fonksiyon oluşturunuz.
-
-int	ft_strlen(char *str)
+int ft_str_is_uppercase(char *str)
 {
-	int	i;
+		int	i;
 
 	i = 0;
 	while (str[i])
 	{
+		if (!(str[i] >= 'A' && str[i] <= 'Z'))
+			return (0);
 		i++;
 	}
-	return (i);
+	return (1);
 }

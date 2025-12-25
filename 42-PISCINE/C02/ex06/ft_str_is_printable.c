@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 22:41:02 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/23 22:41:02 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/24 21:22:51 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/24 21:22:51 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Bir karakter dizisindeki elemanları sayan ve bu sayıyı döndüren bir fonksiyon oluşturunuz.
-
-int	ft_strlen(char *str)
+int ft_str_is_printable(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i])
 	{
+		if (!(str[i] >= 32 && str[i] <= 126))
+			return (0);
 		i++;
 	}
-	return (i);
+	return (1);
 }
