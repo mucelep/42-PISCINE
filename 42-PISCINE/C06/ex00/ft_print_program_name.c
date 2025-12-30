@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mucelep <celepm82@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/26 00:01:12 by mucelep           #+#    #+#             */
-/*   Updated: 2025/12/26 00:01:12 by mucelep          ###   ########.fr       */
+/*   Created: 2025/12/30 19:52:02 by mucelep           #+#    #+#             */
+/*   Updated: 2025/12/30 19:52:02 by mucelep          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//Değişken olarak verilen sayıdan büyük ya da eşit en küçük asal sayıyı çıktı veren
-//bir fonksiyon oluşturunuz.
+//Burada bir program ile uğraşıyoruz, bu yüzden .c file ’ınızda fonksiyon main olmalıdır.
+//• Kendi adını gösteren bir program oluşturunuz.
 
-int ft_find_next_prime(int nb)
+#include <unistd.h>
+
+int main(int argc, char **argv)
 {
 	int	i;
 
-	i = 2;
-	if(nb <= 2)
-		return(2);
-	while (i < nb)
+	i = 0;
+	(void)argc;
+	while (argv[0][i])
 	{
-		if (nb % i == 0)
-		{
-			nb++;
-			i = 1;
-		}
+		write(1, &argv[0][i], 1);
 		i++;
 	}
-	return(nb);
+	write(1, "\n", 1);
+	return (0);
 }
-
-/*#include <stdio.h>
-
-int main ()
-{
-	printf("%d",ft_find_next_prime(24));
-}*/
